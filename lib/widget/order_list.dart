@@ -16,40 +16,56 @@ class OrderList extends StatelessWidget {
         itemCount: trendingitems.length,
         itemBuilder: (context, int i) {
           return Container(
-              margin:  EdgeInsets.only(top: 2.5 * SizeConfig.heightMultiplier),
-              child: Row(
+              margin: EdgeInsets.only(top: 3 * SizeConfig.heightMultiplier),
+              child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(left: 10.20*SizeConfig.widthMultiplier)),
-                  ClipOval(
-                    child: Image.asset(cards[i].imageurl,
-                    fit: BoxFit.fill,
-                    width: 12.75*SizeConfig.widthMultiplier,
-                    height: 6.25*SizeConfig.heightMultiplier,),
-                      
-                    ),
-                  
-                  SizedBox(
-                    width: 38.26*SizeConfig.widthMultiplier,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.black26),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                            padding: EdgeInsets.only(
+                                left: 6 * SizeConfig.widthMultiplier)),
+                        ClipOval(
+                          child: Image.asset(
+                            order[i].orderImage,
+                            fit: BoxFit.fill,
+                            width: 15 * SizeConfig.widthMultiplier,
+                            height: 7 * SizeConfig.heightMultiplier,
+                          ),
                         ),
-                        child: Text(
-                          cards[i].name,
+                        SizedBox(
+                          width: 3 * SizeConfig.widthMultiplier,
+                        ),
+                        Text(
+                          order[i].orderName,
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 3.12*SizeConfig.heightMultiplier),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 2.8 * SizeConfig.heightMultiplier),
                         ),
-                      )
-                    ],
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 180,
+                    padding: EdgeInsets.only(left: 5),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.grey,
+                          style: BorderStyle.solid,
+                        ),
+                        borderRadius: BorderRadius.circular(20)),
+                    margin: EdgeInsets.only(bottom: 0),
+                    child: Text(
+                      order[i].subHeading,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 2 * SizeConfig.heightMultiplier),
+                    ),
                   )
                 ],
               ));
-        });
+        }
+        );
   }
 }
