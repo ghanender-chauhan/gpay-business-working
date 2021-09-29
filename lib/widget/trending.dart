@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gpay_ui/data/data.dart';
 import 'package:gpay_ui/size_config.dart';
 import 'package:gpay_ui/widget/Finance.dart';
+import 'package:gpay_ui/widget/Category_card.dart';
 import 'package:gpay_ui/widget/order_list.dart';
 
 class Trending extends StatelessWidget {
@@ -61,7 +62,7 @@ class Trending extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 3.12 * SizeConfig.heightMultiplier,
-                            color: Colors.white,
+                            color: Colors.grey[200],
                           ),
                         ),
                       )
@@ -91,7 +92,14 @@ class Trending extends StatelessWidget {
 
         Container(
           child: Finance(),
-        )
+        ),
+
+       Container(
+            // color: Colors.grey[200],
+            
+            
+            child: CatCard() ,
+          ),
         
         
         

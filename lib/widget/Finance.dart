@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:gpay_ui/data/data2.dart';
 import 'package:gpay_ui/size_config.dart';
+import 'package:gpay_ui/widget/Category_card.dart';
 
 class Finance extends StatelessWidget {
   final trendingitems = [
@@ -16,7 +17,7 @@ class Finance extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
          
-          color: Colors.white,
+          color: Colors.grey[200],
           child: Column(
             children: [
               Container(
@@ -156,7 +157,8 @@ class Finance extends StatelessWidget {
               ));
         }
         ),
-          )
+          ),
+          
           
             ],
             

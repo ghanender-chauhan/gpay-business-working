@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gpay_ui/widget/order_list.dart';
 import 'package:gpay_ui/widget/trending.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,14 +8,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Icon(
-          Icons.dangerous_outlined,
+          Icons.menu,
           color: Colors.black,
         ),
         title: Text(
           "Buiseness",
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey[200],
         actions: <Widget>[
           IconButton(
             onPressed: () {},
@@ -28,7 +29,7 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
          
-          color: Colors.white,
+          color: Colors.grey[200],
           child: Column(
             children: [
               Container(
@@ -47,11 +48,13 @@ class HomePage extends StatelessWidget {
                 height: 8,
               ),
               Divider(height: 10, thickness: 5,color: Colors.blue[200],),
-              SingleChildScrollView(
-                child: Container(
-                  child: Trending(),
-                ),
-              ),
+              
+              Trending(),
+              
+
+
+                
+              
             ],
           ),
         ),

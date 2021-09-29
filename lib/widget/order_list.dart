@@ -16,12 +16,13 @@ class OrderList extends StatelessWidget {
         itemCount: trendingitems.length,
         itemBuilder: (context, int i) {
           return Container(
-              margin: EdgeInsets.only(top: 3 * SizeConfig.heightMultiplier),
+              margin: EdgeInsets.only(top: 2.5 * SizeConfig.heightMultiplier),
               child: Column(
                 children: [
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
                             padding: EdgeInsets.only(
@@ -63,6 +64,9 @@ class OrderList extends StatelessWidget {
                           fontSize: 2 * SizeConfig.heightMultiplier),
                     ),
                   )
+                  
+                    
+                  
                 ],
               ));
         }
